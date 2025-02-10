@@ -21,7 +21,9 @@ class Person:
 
 def create_person_list(person_data: list) -> list:
     """Creates a list of all dictionary elements"""
-    persons = {data["name"]: Person(data["name"], data["age"]) for data in person_data}
+    persons = {
+        data["name"]: Person(data["name"], data["age"]) for data in person_data
+    }
 
     for data in person_data:
         person = persons[data["name"]]
